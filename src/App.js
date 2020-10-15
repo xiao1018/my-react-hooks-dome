@@ -1,7 +1,13 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-import Tabs from './component/tabs'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
 import './assets/css/app/app.scss'
+import { AppStore } from './store'
+import Tabs from './component/tabs'
 
 const Home = lazy(() => import('./pages/home'))
 const Cart = lazy(() => import('./pages/cart'))
@@ -11,23 +17,25 @@ const Topic = lazy(() => import('./pages/topic'))
 
 function App () {
   return (
-    <div className="app">
-      <Router>
-        <Suspense fallback={<div>...</div>}>
-          <Switch>
-            <Route path='/home' component={Home} />
-            <Route path='/category' component={Category} />
-            <Route path='/cart' component={Cart} />
-            <Route path='/topic' component={Topic} />
-            <Route path='/mine' component={Mine} />
-            <Route render={() => <Redirect to='/home' />} />
-          </Switch>
-        </Suspense>
+    <AppStore>
+      <div className="app">
+        <Router>
+          <Suspense fallback={<div>...</div>}>
+            <Switch>
+              <Route path='/home' component={Home} />
+              <Route path='/category' component={Category} />
+              <Route path='/cart' component={Cart} />
+              <Route path='/topic' component={Topic} />
+              <Route path='/mine' component={Mine} />
+              <Route render={() => <Redirect to='/home' />} />
+            </Switch>
+          </Suspense>
 
-        <Tabs />
+          <Tabs />
 
-      </Router>
-    </div>
+        </Router>
+      </div>
+    </AppStore>
   )
 }
 

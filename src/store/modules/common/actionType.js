@@ -1,0 +1,1 @@
+export const SET_TOTAL_DATA = 'set_total_data'

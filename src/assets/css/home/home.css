@@ -1,0 +1,133 @@
+.home .header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  padding: 8px 15px;
+  background: #e4c4c4;
+  display: flex;
+}
+
+.home .header .logo {
+  line-height: 28px;
+  margin-right: 15px;
+}
+
+.home .header .login {
+  width: 36px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 4px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 3px;
+}
+
+.home .menu {
+  z-index: 5;
+}
+
+.home .menu .arrow-click {
+  width: 60px;
+  height: 32px;
+  position: absolute;
+  top: 44px;
+  right: 0;
+  display: flex;
+  z-index: 5;
+}
+
+.home .menu .arrow-click div:nth-child(1) {
+  flex: 1;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, white 100%);
+}
+
+.home .menu .arrow-click div:nth-child(2) {
+  width: 45px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #fff;
+}
+
+.home .menu .wrapper {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  right: 0;
+  height: 32px;
+  background: #16b0d6;
+  overflow: hidden;
+}
+
+.home .menu .wrapper .nav-menu {
+  width: 700px;
+  padding-left: 10px;
+}
+
+.home .menu .wrapper .nav-menu ul {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.home .menu .wrapper .nav-menu ul .menu-item {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 10px;
+  line-height: 32px;
+  font-size: 14px;
+}
+
+.home .menu .wrapper .nav-menu ul .active {
+  border-bottom: 2px solid red;
+}
+
+.home .menu .menu-list {
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  background: #fff;
+  z-index: 5;
+}
+
+.home .menu .menu-list .menu-title {
+  height: 32px;
+  padding-left: 15px;
+  line-height: 32px;
+  font-size: 14px;
+}
+
+.home .menu .menu-list ul {
+  padding-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home .menu .menu-list ul li {
+  box-sizing: border-box;
+  width: 20%;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  margin-left: 15px;
+  background: #dedede;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.home .menu .menu-list ul .active {
+  border: 1px solid red;
+  color: red;
+}
+
+.home .shade {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 44px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}

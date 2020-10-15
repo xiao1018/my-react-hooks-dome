@@ -34,3 +34,17 @@
   background: #54cddd;
   color: #f34040;
 }
+
+.app .top-search {
+  flex: 1;
+  background: #aaa7a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.app .top-search span {
+  font-size: 14px;
+  margin-left: 5px;
+}

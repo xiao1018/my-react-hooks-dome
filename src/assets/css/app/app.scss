@@ -33,4 +33,18 @@
       color: rgb(243, 64, 64);
     }
   }
+
+  .top-search {
+    flex: 1;
+    background: rgb(170, 167, 167);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    span {
+      font-size: 14px;
+      margin-left: 5px;
+    }
+  }
 }
